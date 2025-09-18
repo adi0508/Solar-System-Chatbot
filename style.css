@@ -8,6 +8,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.solar-system {
+  transform: scale(0.83);   /* shrink to 70% of original */
+  transform-origin: center; /* scale relative to top */
+  margin-top: -50px; /* lift it upward a bit */
+}
+
 /* Project Header Styling */
 #project-header {
   text-align: center;
