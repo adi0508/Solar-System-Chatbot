@@ -1,5 +1,25 @@
 console.log("Solar System page loaded");
 
+// Generate random stars
+function createStars(count = 150) {
+  const starsContainer = document.querySelector('.stars');
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('span');
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    const size = Math.random() * 2 + 1; // 1–3px
+    const delay = Math.random() * 3;    // 0–3s twinkle delay
+
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDelay = `${delay}s`;
+
+    starsContainer.appendChild(star);
+  }
+}
+
 /* Tooltip logic so labels stay upright while planets orbit */
 const tooltip = document.getElementById('tooltip');
 let rafId = null;
@@ -143,29 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Generate random stars
-function createStars(count = 150) {
-  const starsContainer = document.querySelector('.stars');
-  for (let i = 0; i < count; i++) {
-    const star = document.createElement('span');
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    const size = Math.random() * 2 + 1; // 1–3px
-    const delay = Math.random() * 3;    // 0–3s twinkle delay
-
-    star.style.left = `${x}px`;
-    star.style.top = `${y}px`;
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.animationDelay = `${delay}s`;
-
-    starsContainer.appendChild(star);
-  }
-}
 
 // Call on load
 document.addEventListener("DOMContentLoaded", () => {
   createStars(200); // adjust number for density
 });
-
-

@@ -8,6 +8,29 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Project Header Styling */
+#project-header {
+  text-align: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 15px;
+  border-bottom: 2px solid #444;
+  font-family: 'Arial', sans-serif;
+}
+
+#project-header h1 {
+  margin: 5px 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+#project-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #ddd;
+}
+
 /* Starfield background */
 .stars {
   position: fixed;
